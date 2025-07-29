@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <div class="card-header"><strong> Confirmation </strong></div>
+    <div class="card-body">
+        <div class="row m-2 msg">
+            {{confirmMessage}}
+        </div>
+        <div>
+            <button class="btn btn-success confirm" (click)="dialogRef.close(true)">Confirm</button>
+            <button class="btn btn-danger" (click)="dialogRef.close(false)">Cancel</button>
+        </div>
+    </div>
+</div>

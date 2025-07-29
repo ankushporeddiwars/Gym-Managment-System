@@ -1,0 +1,17 @@
+{
+  "routes": [
+    "/login",
+    "/main",
+    "/main/allUsers",
+    "/main/dashboard",
+    "/main/enquiry",
+    "/main/exportData",
+    "/main/masters",
+    "/main/masters/package",
+    "/main/printReceipt",
+    "/main/registration",
+    "/main/searchMembers",
+    "/main/setting",
+    "/main/trainerDetails"
+  ]
+}

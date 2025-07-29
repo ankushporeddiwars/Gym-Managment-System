@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <mat-nav-list>
+      @for (item of menuModel; track $index) {
+      <app-menu-list-item [item]="item" [showLeftNav]="showLeftNav" class="list"></app-menu-list-item>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="fixed-topnav mat-elevation-z8 shadow">
+      <mat-toolbar-row>
+        <mat-icon class="icon-display-menu" (click)="showAndHideLeftNav()">menu</mat-icon>
+        <div class="primaryImage"> <img src="./assets/images/samiksha_logo.png"> </div>
+        <span class="flexExpand"></span>
+        <div>
+          <span>
+            <i class="material-icons icon-display" [matMenuTriggerFor]="user">account_circle</i>
+            <mat-menu #user="matMenu" x-position="before">
+              <button mat-menu-item (click)="logout()"><i class="material-icons">logout</i>Logout</button>
+            </mat-menu>
+          </span>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

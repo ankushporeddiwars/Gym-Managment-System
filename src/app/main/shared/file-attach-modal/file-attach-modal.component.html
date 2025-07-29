@@ -1,0 +1,12 @@
+<div class="container-fluid m-2 border-1">
+    <div class="m-1">
+        <input #file type="file" name="file" placeholder="File Name" (change)="this.onFilechange($event)"
+            class="form-control inputField">
+    </div>
+    <div class="m-1">
+        <button (click)="uploadFile()" class="btn btn-primary"><mat-icon>cloud_upload</mat-icon>Upload</button>
+    </div>
+    <div class="m-1">
+        <label style="color: red;">{{status}}</label>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.inputField {
+    height: 2.3rem;
+}
+
+input::file-selector-button {
+    color: #0b5ed7;
+    padding: 0.6em;
+    border: 0px solid #ffffff;
+    border-radius: 3px;
+}

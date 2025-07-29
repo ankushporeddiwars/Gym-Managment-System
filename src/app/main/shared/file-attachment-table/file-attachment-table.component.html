@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-header"><strong> Attachments :</strong></div>
+    <div class="card-body">
+        <div>
+            <button class="btn btn-success btn-sm" (click)="addAttachment()"><mat-icon>add</mat-icon>Add</button>
+        </div>
+        <div class="row mt-1">
+            <table class="table">
+                <thead>
+                    <tr class="header">
+                        <th scope="col">File Type</th>
+                        <th scope="col">File Description</th>
+                        <th scope="col">Attachment Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let list of files; let i = index">
+                        <td>{{list.fileType}}</td>
+                        <td><label [innerText]="list.fileDesc"></label></td>
+                        <td>
+                            <a
+                                (click)="downloadFile(list.serverFileName, list.clientFileName)">{{list.clientFileName}}</a>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm p-0"
+                                (click)="deleteDocument(list, i)"><mat-icon>delete</mat-icon></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="card m-2">
+    <div class="card-header">Add Attachment</div>
+    <div class="card-body">
+        <form [formGroup]="attachmentForm">
+            <div class="row">
+                <div class="col-6">
+                    <label for="" class="matHeading"> File Type : <strong style="color: red;">*</strong> </label>
+                    <mat-form-field appearance="outline">
+                        <mat-select matInput placeholder="--Select--" formControlName="fileType">
+                            <mat-option *ngFor="let item of fileTypes" [value]="item.id"> {{ item.displayName
+                                }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <label for="" class="matHeading">File Description : <strong style="color: red;">*</strong></label>
+                    <textarea class="form-control textArea" formControlName="fileDescription"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 selectFile">
+                    <app-file-upload (fileSelected)="NewFileAdded($event)" #file></app-file-upload>
+                </div>
+                <div class="col-2 mt-1">
+                    <button type="submit" class="form-control" class="btn btn-primary btn-sm"
+                        (click)="save()">Save</button>
+                    <button type="button" class="form-control" class="btn btn-danger btn-sm m-1"
+                        mat-dialog-close>Close</button>
+                </div>
+                <div class="col-4">
+                    <label class="success">{{status}}</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+mat-toolbar {
+  background: #edeff170;
+  color: #2c3774;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 3.3rem);
+}
+
+mat-sidenav {
+  margin: 0.3rem;
+  width: 16.3rem;
+  border-right: none;
+  background-color: #4268a1;
+  border-radius: 0.8rem;
+}
+
+mat-divider {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.content {
+  font-size: 1rem;
+  font-family: 'Trebuchet MS', Calibiri, Helvetica, Arial, serif;
+  height: calc(100vh - 7.8rem);
+  border-radius: 0.8rem;
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
+  padding: 0.8rem;
+  overflow-y: auto;
+}
+
+.name {
+  margin-top: 0.8rem;
+  font-weight: normal;
+}
+
+.flexExpand {
+  flex: 1 1 auto;
+}
+
+
+.logo {
+  background-image: url(/assets/images/logo.svg);
+  width: 25rem;
+  height: 7rem;
+  -webkit-background-size: 25rem 8rem;
+  background-size: 25rem 8rem;
+  margin: auto;
+}
+
+.logo-secondary {
+  background-image: url(/assets/images/logo-secondary.svg);
+}
+
+img,
+svg {
+  vertical-align: middle;
+  height: 3rem;
+  margin-left: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.primaryImage img {
+  padding-left: 0.5rem;
+}
+
+.secondaryImage img {
+  margin-right: 0.5rem;
+}
+
+.mdc-list-item__primary-text {
+  font-size: 2rem;
+}
+
+.list {
+  list-style: none;
+  padding: 2px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0.2rem 0.2rem 1rem rgb(243, 241, 241);
+    background-color: #285299;
+    border-radius: 0.7rem;
+  }
+}
+
+.icon-display {
+  transform: scale(2.2);
+}
+
+.icon-display-menu {
+  transform: scale(1.3);
+  color: #285299;
+}
